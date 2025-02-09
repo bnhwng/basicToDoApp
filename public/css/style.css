@@ -1,0 +1,118 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fe6601, #ed9e67);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* To-Do Container */
+.to-do-container {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: orangered;
+  margin-bottom: 20px;
+}
+
+/* Input & Button */
+.add-bar {
+  display: flex;
+  background: #f1f1f1;
+  border-radius: 25px;
+  padding: 5px;
+  align-items: center;
+}
+
+.add-bar input {
+  flex: 1;
+  border: none;
+  padding: 10px 15px;
+  background: transparent;
+  outline: none;
+}
+
+.add-bar button {
+  border: none;
+  background: orangered;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.add-bar button:hover {
+  background: #d35400;
+}
+
+/* Task List */
+ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+ul li {
+  background: #fff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+/* Checked (Completed) Tasks */
+ul li.checked {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+ul li.checked::before {
+  background-color: orangered;
+}
+
+/* Close Button */
+ul li .close {
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+ul li .close:hover {
+  color: red;
+}
+
+/* Animation */
+ul li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
